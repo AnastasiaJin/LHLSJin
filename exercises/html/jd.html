@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>京东(JD.COM)-正品低价、品质保障、配送及时、轻松购物！</title>
+	<link rel="stylesheet" href="../css/jd.css" />
+	<style type="text/css">
+#flash{width: 560px;height: 254px;position: relative;cursor: pointer;}
+#pic li{position: absolute;left:0px;z-index: 1;display: none;}
+#num{position: absolute;left: 40%;bottom: 10px;z-index: 2;cursor:default;}
+#num li{float: left;width: 20px;height: 20px;border-radius: 50%;background: #666;margin: 3px;line-height: 20px;text-align: center;color: #fff;cursor: pointer;}
+#num li.active{background: #f00;}
+.arrow{height: 60px;width: 30px;line-height: 60px;text-align: center;display: block;position: absolute;top:45%;background-color: rgba(0,0,0,0.3);z-index: 3;display: none;}
+.arrow:hover{background: rgba(0,0,0,0.7);}
+#flash:hover .arrow{display: block;}
+#left{left: 2%;}
+#right{right: 2%;}
+</style>
+	<script type="text/javascript">
+    function $(id) {
+        return typeof id==='string'?document.getElementById(id):id;
+    }
+    window.onload=function(){
+        var index=0;
+        var timer=null;
+        var pic=$("pic").getElementsByTagName("li");
+        var num=$("num").getElementsByTagName("li");
+        var flash=$("flash");
+        var left=$("left");
+        var right=$("right");
+        left.onclick=function(){
+            index--;
+            if (index<0) {
+                index=num.length-1
+            };
+            changeOption(index);
+        }
+        right.onclick=function(){
+            index++;
+            if (index>=num.length) {
+                index=0
+            };
+            changeOption(index);
+        }
+        flash.onmouseover=function(){
+            clearInterval(timer);
+        }
+        flash.onmouseout=function(){
+            timer=setInterval(run,2000)
+        }
+        for(var i=0;i<num.length;i++){
+            num[i].id=i;
+            num[i].onmouseover=function(){
+                clearInterval(timer);
+                changeOption(this.id);
+            }
+        }
+        timer=setInterval(run,2000)
+        function run(){
+            index++;
+            if (index>=num.length) {
+                index=0
+            };
+            changeOption(index);
+        }
+        function changeOption(curindex){
+            console.log(index)
+            for(var j=0;j<num.length;j++){
+                pic[j].style.display="none";
+                num[j].className="";
+            }
+            pic[curindex].style.display="block";
+            num[curindex].className="active";
+            index=curindex;
+        }
+    }
+</script>
+</head>
+<body>
+	<div>
+		<a href="https://sale.jd.com/act/XGi5dngvKfDSop.html?cpdad=1DLSUE">
+			<img src="../images/header.jpg" width="100%" height="85">
+		</a>
+	</div>
+	<div class="header">
+		<ul>
+			<li>
+				<a href="">手机京东</a>
+			</li>
+			<li>
+				<a href="" title="网站导航">网站导航  |</a>
+			</li>
+			<li>
+				<a href="" title="客户服务">客户服务  |</a>
+			</li>
+			<li>
+				<a href="https://b.jd.com/" title="企业采购" class="style1">企业采购  |</a>
+			</li>
+			<li>
+				<a href="https://vip.jd.com/" title="京东会员" class="style1">京东会员  |</a>
+			</li>
+			<li>
+				<a href="" title="我的订单" class="style1">我的订单  |</a>
+			</li>
+			<li>
+				<a href="" title="免费注册" class="style1" style="color: red;">免费注册  |</a>
+			</li>
+			<li>
+				<a href="" title="你好，请登录" class="style1">你好，请登录  |</a>
+			</li>
+		</ul>
+		<div class="box1">
+			<img src="../images/logo.png" width="180" height="180">
+		</div>	
+	</div>
+	<div class="container">			
+			<div class="style1_3">
+				<form method="get" id="searchform" action="" style="margin-top: 10px;">
+    				<fieldset class="search">
+         				<input type="text" class="box" name="s" id="s" class="inputText" placeholder="点击搜索商品"
+         			    x-webkit-speech>
+         			    <button class="btn1"></button>
+         				<button class="btn2"> </button>
+   					</fieldset>
+				</form>
+			</div>
+			<div class="style1_4">
+				<p style="color: red;font-size: 10px;">我的购物车</p>
+			</div>
+			<div class="style1_1">
+				<ul>
+					<li>
+						<a href="https://search.jd.com/Search?keyword=%E7%8E%A9%E5%85%B7%E8%BD%A6&enc=utf-8&spm=1.1.8" title="玩具车" style="margin-right: 453px;" class="style1">玩具车</a>
+					</li>
+					<li>
+						<a href="https://sale.jd.com/act/BTvhIzOKxDi.html?spm=1.1.7" title="欧莱雅上新" class="style1">欧莱雅上新</a>
+					</li>
+					<li>
+						<a href="https://search.jd.com/Search?keyword=%E7%83%AD%E6%B0%B4%E5%99%A8&enc=utf-8&spm=1.1.6" title="热水器" class="style1">热水器</a>
+					</li>
+					<li>
+						<a href="https://search.jd.com/Search?keyword=%E7%9A%AE%E8%A3%A4&enc=utf-8&spm=1.1.5" title="皮裤" class="style1">皮裤</a>
+					</li>
+					<li>
+						<a href="https://sale.jd.com/act/Fx0rPsCDifj2I.html?spm=1.1.4" title="家电满赠" class="style1">家电满赠</a>
+					</li>
+					<li>
+						<a href="https://mall.jd.com/index-1000085122.html?spm=1.1.3" title="阿玛尼" class="style1">阿玛尼</a>
+					</li>
+					<li>
+						<a href="https://sale.jd.com/act/CQOK3hAmpury2HR.html?spm=1.1.2" title="8折购农机" class="style1">8折购农机</a>
+					</li>
+					<li>
+						<a href="https://sale.jd.com/act/K8i1dm7kDZq.html?spm=1.1.1" title="小米6" class="style1">小米6</a>
+					</li>								
+					<li>
+						<a href="https://sale.jd.com/act/y5X7Bkva8j2H3Ou.html?spm=1.1.0" title="199减100" style="color: red">199减100</a>
+					</li>
+				</ul>
+			</div>
+			<div class="style1_2">			
+				<ul style="margin-top: 8px;">
+					<li class="style3" style="margin-right: 397px;">
+						<a href="https://jr.jd.com/" class="style3_1">京东金融</a>
+					</li>
+					<li class="style3">
+						<a href="https://www.jd.hk/" class="style3_1">全球购</a>
+					</li>
+					<li class="style3">
+						<a href="https://fresh.jd.com/" class="style3_1">生鲜</a>
+					</li>
+					<li class="style3">
+						<a href="https://chaoshi.jd.com/" class="style3_1">	京东超市</a>
+					</li>
+					<li class="style3">
+						<a href="https://channel.jd.com/fashion.html" class="style3_1">服装城</a>
+					</li>
+					<li class="style3">
+						<a href="https://auction.jd.com/home.html" class="style3_1">拍卖</a>
+					</li>
+					<li class="style3">
+						<a href="https://red.jd.com/" class="style3_1">闪购</a>
+					</li>
+					<li class="style3">
+						<a href="https://a.jd.com/" class="style3_1">优惠券</a>
+					</li>
+					<li class="style3">
+						<a href="https://miaosha.jd.com/" class="style3_1">秒杀</a>
+					</li>
+				</ul>
+			</div>
+			<div>
+				<div class="left-sidebar">
+				<br>
+					<div>
+						<a href="https://jiadian.jd.com/" class="style2" title="家用电器">家用电器</a>
+					</div>
+					<div>
+						<ul>
+							<li>
+								<a href="https://shuma.jd.com/" title="数码" style="margin-right: 1061px;margin-top: 15px;" class="style2">数码</a>
+							</li>
+							<li>
+								<a href="https://shouji.jd.com/" title="运营商" class="style2">运营商  &nbsp /</a>
+							</li>
+							<li>
+								<a href="https://shouji.jd.com/" title="手机" class="style2">手机  &nbsp /</a>
+							</li> 
+						</ul>
+					</div>
+					<div>
+						<ul>
+							<li>
+								<a href="https://bg.jd.com/" title="办公"  style="margin-right: 1119px;" class="style2">办公</a>
+							</li>
+							<li>
+								<a href="https://diannao.jd.com/" title="电脑" class="style2">电脑 &nbsp /</a>
+							</li>
+						</ul>
+					</div>
+					<div>
+						<ul>
+							<li>
+								<a href="https://channel.jd.com/kitchenware.htmlv" title="厨具" class="style2" style="margin-right: 1025px;">厨具</a>
+							</li>
+							<li>
+								<a href="https://channel.jd.com/decoration.html" title="家居" class="style2">家居 &nbsp /</a>
+							</li>
+							<li>
+								<a href="https://channel.jd.com/furniture.html" title="家具" class="style2">家具 &nbsp /</a>
+							</li>
+							<li>
+								<a href="https://channel.jd.com/home.html" title="家居" class="style2">家居 &nbsp /</a>
+							</li>
+						</ul>
+					</div>
+					<div>
+						<ul>
+							<li>
+								<a href="http://channel.jd.com/underwear.html" title="内衣" class="style2" style="margin-right: 1025px;">内衣</a>
+							</li>
+							<li>
+								<a href="https://channel.jd.com/children.html" title="童装" class="style2">童装 &nbsp /</a>
+							</li>
+							<li>
+								<a href="http://channel.jd.com/women.html" title="女装" class="style2">女装 &nbsp /</a>
+							</li>
+							<li>
+								<a href="http://channel.jd.com/men.html" title="男装" class="style2">男装 &nbsp /</a>
+							</li>
+						</ul>
+					</div>
+					<div>
+						<ul>
+							<li>
+								<a href="https://channel.jd.com/pet.html" title="宠物" class="style2" style="margin-right: 1097px;">宠物</a>
+							</li>
+							<li>
+								<a href="https://channel.jd.com/beauty.html" title="美妆个户" class="style2">美妆个户 &nbsp /</a>
+							</li>
+						</ul>
+					</div>
+					<div>
+						<ul>
+							<li>
+								<a href="https://channel.jd.com/jewellery.html" title="珠宝" class="style2" style="margin-right: 1025px;">珠宝</a>
+							</li>
+							<li>
+								<a href="https://channel.jd.com/watch.html" title="钟表" class="style2">钟表 &nbsp /</a>
+							</li>
+							<li>
+								<a href="https://channel.jd.com/bag.html" title="箱包" class="style2">箱包 &nbsp /</a>
+							</li>
+							<li>
+								<a href="https://channel.jd.com/womensshoes.html" title="女鞋" class="style2">女鞋 &nbsp /</a>
+							</li>
+						</ul>
+					</div>
+					<div>
+						<ul>
+							<li>
+								<a href="https://channel.jd.com/outdoor.html" title="户外" class="style2" style="margin-right: 1072px;">户外</a>
+							</li>
+							<li>
+								<a href="https://channel.jd.com/yundongcheng.html" title="运动" class="style2">运动 &nbsp /</a>
+							</li>
+							<li>
+								<a href="https://channel.jd.com/mensshoes.html" title="男鞋" class="style2">男鞋 &nbsp /</a>
+							</li>
+						</ul>
+					</div>
+					<div>
+						<ul>
+							<li>
+								<a href="https://che.jd.com/" title="汽车用品" class="style2" style="margin-right: 1097px;">汽车用品</a>
+							</li>
+							<li>
+								<a href="http://car.jd.com/?ccode=1201" title="汽车" class="style2">汽车 &nbsp /</a>
+							</li>
+						</ul>
+					</div>
+					<div>
+						<ul>
+							<li>
+								<a href="https://toy.jd.com/" title="玩具乐器" class="style2" style="margin-right: 1097px;">玩具乐器</a>
+							</li>
+							<li>
+								<a href="https://baby.jd.com/" title="母婴" class="style2">母婴 &nbsp /</a>
+							</li>
+						</ul>
+					</div>
+					<div>
+						<ul>
+							<li>
+								<a href="https://china.jd.com/" title="特产" class="style2" style="margin-right: 1025px;">特产</a>
+							</li>
+							<li>
+								<a href="https://fresh.jd.com/" title="生鲜" class="style2">生鲜 &nbsp /</a>
+							</li>
+							<li>
+								<a href="https://jiu.jd.com/" title="酒类" class="style2">酒类 &nbsp /</a>
+							</li>
+							<li>
+								<a href="https://channel.jd.com/food.html" title="食品" class="style2">食品 &nbsp /</a>
+							</li>
+						</ul>
+					</div>
+					<div>
+						<ul>
+							<li>
+								<a href="https://channel.jd.com/9192-9196.html" title="计生情趣" class="style2" style="margin-right: 1075px;">计生情趣</a>
+							</li>
+							<li>
+								<a href="https://health.jd.com/" title="医药保健" class="style2">医药保健 &nbsp /</a>
+							</li>
+						</ul>
+					</div>
+					<div>
+						<ul>
+							<li>
+								<a href="http://e.jd.com/" title="电子书" class="style2" style="margin-right: 1061px;">电子书</a>
+							</li>
+							<li>
+								<a href="https://mvd.jd.com/" title="音像" class="style2">音像 &nbsp /</a>
+							</li>
+							<li>
+								<a href="https://book.jd.com/" title="图书" class="style2">图书 &nbsp /</a>
+							</li>
+						</ul>
+					</div>
+					<div>
+						<ul>
+							<li>
+								<a href="https://ish.jd.com/" title="生活" class="style2" style="margin-right: 1025px;">生活</a>
+							</li>
+							<li>
+								<a href="https://trip.jd.com/" title="旅游" class="style2">旅游 &nbsp /</a>
+							</li>
+							<li>
+								<a href="https://hotel.jd.com/" title="酒店" class="style2">酒店 &nbsp /</a>
+							</li>
+							<li>
+								<a href="https://jipiao.jd.com/" title="机票" class="style2">机票 &nbsp /</a>
+							</li>
+						</ul>
+					</div>
+					<div>
+						<ul>
+							<li>
+								<a href="https://bao.jd.com/" title="保险" class="style2" style="margin-right: 1025px;">保险</a>
+							</li>
+							<li>
+								<a href="https://baitiao.jd.com/" title="白条" class="style2">白条 &nbsp /</a>
+							</li>
+							<li>
+								<a href="https://z.jd.com/sceneIndex.html" title="众筹" class="style2">众筹 &nbsp /</a>
+							</li>
+							<li>
+								<a href="https://licai.jd.com/" title="理财" class="style2">理财 &nbsp /</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="main">
+					<div id="flash">
+    					<ul id="pic">
+        					<li style="display:block">
+            					<img src="http://img13.360buyimg.com/da/jfs/t2242/262/578407619/87636/4ffe0c5/56187ed2Nfed9a5b3.jpg" width="600" height="240">
+        					</li>
+       						<li>
+            <img src="http://img13.360buyimg.com/da/jfs/t2143/111/577347825/96150/e27180bd/561889b3N42ee62b5.jpg" width="600" height="240">
+        </li>
+        <li>
+            <img src="http://img20.360buyimg.com/da/jfs/t1825/234/1750370913/97529/b9229832/560b5ad3N054605f7.jpg" width="600" height="240">
+        </li>
+        <li>
+            <img src="http://img10.360buyimg.com/da/jfs/t2026/215/573306345/95654/a0211937/5618a735N1b3d8423.jpg" width="600" height="240">
+        </li>
+        <li>
+            <img src="http://img20.360buyimg.com/da/jfs/t2065/362/579832759/78899/6f349917/5618c680N3752bacc.jpg" width="600" height="240">
+        </li>
+        <li>
+            <img src="http://img10.360buyimg.com/da/jfs/t2023/45/384256123/101565/9b6e5daf/5604bdceN8c7d2ccf.jpg" width="600" height="240">
+        </li>
+    </ul>
+    <ol id="num">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+    </ol>
+    <a href="javascript:;" id="left">&lt;</a>
+    <a href="javascript:;" id="right">&gt;</a> 
+</div>	
+				</div>
+				<div class="main-bottom-left">
+					<a href="https://baby.jd.com/">
+						<img src="../images/jd1.jpg" width="290" height="100" style="margin-left: 0px;">
+					</a>
+				</div>
+				<div class="main-bottom-right">
+					<a href="https://jiadian.jd.com/">
+						<img src="../images/jd2.jpg" width="290" height="100" style="margin-left: 0px;">
+					</a>
+				</div>				
+				<div class="right-sidebar">
+					<div class="circle">
+						<a href="https://passport.jd.com/new/login.aspx?ReturnUrl=http%3A%2F%2Fhome.jd.com%2F">
+							<img src="../images/no_login.jpg">
+						</a>					
+					</div>
+					<div>
+						<p>Hi,欢迎来到京...</p>	
+					</div>
+					<div>
+						<a href="https://passport.jd.com/new/login.aspx?ReturnUrl=https%3A%2F%2Fwww.jd.com%2F%3Fcu%3Dtrue%26utm_source%3Dhaosou-pinzhuan%26utm_medium%3Dcpc%26utm_campaign%3Dt_288551095_haosoupinzhuan%26utm_term%3D0a875d61c5fe47d8bc48679132932d23_0_36f40b88ff634a0e9cdbd7cd6d7528ac" title="登录" class="style5">登录</a>
+					</div>
+					<div style="margin-right: 10px;margin-top: 20px;">
+						<a href="" title="注册" class="style6">注册</a>
+					</div>
+					<div class="style7">
+						<form action="https://xinren.jd.com/?channel=99">
+							<input type="submit" value="新人福利">
+						</form>
+					</div>	
+					<div class="style8">
+						<form action="https://passport.jd.com/new/login.aspx?ReturnUrl=https%3A%2F%2Fplus.jd.com%2Findex">
+							<input type="submit" value="PLUS会员">
+						</form>
+					</div>
+					<div class="box_sprit">
+						<span class="icon1"></span>
+   						<span class="icon2"></span>
+   						<span class="icon3"></span>
+    					<span class="icon4"></span>
+    					<span class="icon5"></span>
+   						<span class="icon6"></span>
+   						<span class="icon7"></span>
+    					<span class="icon8"></span>
+    					<span class="icon9"></span>
+   						<span class="icon10"></span>
+   						<span class="icon11"></span>
+    					<span class="icon12"></span>
+					</div>								
+				</div>	
+			</div>
+			<div>
+				<a href="https://miaosha.jd.com/" >
+					<img src="../images/main.png" width="1000" style="margin-top: 360px;">
+				</a>
+			</div>
+			<div>
+				<div class="three">
+					<div style="background-color: orange; height: 40px;">
+						<div class="style4">
+							排行榜
+						</div>
+					</div>
+				</div>
+				<div class="two">
+					<div style="background-color: red; height: 40px;">
+						<div class="style4">
+							优品专辑
+						</div>
+					</div>
+				</div>
+				<div class="one">
+					<div style="background-color: blue; height: 40px;">
+						<div class="style4"">
+							发现好货
+						</div>
+					</div>
+				</div>
+			</div>
+	</div>
+		
+
+</body>
+</html>

@@ -1,0 +1,71 @@
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td{
+	padding: 0;
+	margin: 0;
+}
+/*body {
+　  background-color: #d2e9ff;
+}*/
+.header{ 
+	width: 500px;
+	text-align:center;
+	margin: 0 auto;
+	margin-top: 30px;
+}
+.header h1{
+	color: #2894ff;
+	font-size: 70px;
+    height: 100px;
+	font-family: arial；
+}
+.header h2{
+	color: #5b5b5b;
+	font-size: 18px;
+	height: 50px;
+}
+.content{
+	margin: 0 auto;
+	font-family: arial;
+	margin-top: 10px;
+	text-align: center;
+}
+.content .style{
+	width: 500px;
+    height: 50px
+}
+.content .style p{
+	font-size: 28px;
+	color: #2894ff;
+
+}
+.content input{
+	border:1px solid #adadad;
+	width: 300px;
+    height: 40px;
+    color: #7b7b7b;
+}
+.content .line{
+	width: 500px;
+	height: 40px;
+}
+.content .line button{
+	border: 1px solid #0072e3;
+	color: white;
+	background-color: #0072e3;
+}
+.content button{
+	width: 100%;
+	border: 1px solid blue;
+	margin-top: 10px;
+	color: blue;
+	background-color: white;
+}
+.content p{
+	font-size: 15px;
+	color: #adadad;
+	margin-top: 20px;
+}
+.content a{
+	font-size: 15px;
+	color: #6c6c6c;
+	margin-top: 100px
+}

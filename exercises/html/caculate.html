@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>caculate</title>
+    <script language="javascript" type="text/javascript">
+        var clearFlag=false;
+      	function getNum(num){
+   			var result=document.getElementById("result");
+   			if(clearFlag){
+    			result.value="";
+    			clearFlag=false;
+   			}
+  			result.value+=num;
+  		}
+		function getResult(){
+  			var result=document.getElementById("result");
+  			result.value=result.value+"="+eval(result.value);
+  			clearFlag=true;
+ 		}
+ 		function fun_Backspace()
+    	{
+          	result.value=result.value.slice(0,-1);
+    	}
+    	function fun_CE()
+    	{
+        	result.value='0';
+    	}
+   	 	function fun_clear()
+    	{ 
+        	result.value='';
+    	}
+    	function fun_bac()
+    	{
+          	result.value=(-1)*result.value;
+    	}
+ 	</script>
+</head>
+<body>
+ 	<table width="200" border="1" cellpadding="2">
+   	<tr>
+     	<td colspan="4"><input type="text" name="result" id="result" size="33"></td>
+   	</tr>
+   	<tr>
+      	<td width="56"><input type="button" value="  CE   " onclick="fun_CE()"></td>
+      	<td width="56"><input type="button" value="  BS   " onclick="fun_Backspace()"></td>
+      	<td width="51"><input type="button" value="  +/-   " onclick="fun_bac()"></td>
+      	<td width="58"><input type="button" value="  C  " onclick="fun_clear()"></td>
+    </tr>
+   	<tr>
+     	<td><input type="button" value="  1   " onclick="getNum(1)"></td>
+     	<td><input type="button" value="  2   " onclick="getNum(2)"></td>
+     	<td><input type="button" value="  3   " onclick="getNum(3)"></td>
+     	<td><input type="button" value="  +   " onclick="getNum('+')"></td>
+   	</tr>
+   	<tr>
+     	<td><input type="button" value="  4   " onclick="getNum(4)"></td>
+     	<td><input type="button" value="  5   " onclick="getNum(5)"></td>
+     	<td><input type="button" value="  6   " onclick="getNum(6)"></td>
+     	<td><input type="button" value="  -   " onclick="getNum('-')"></td>
+   	</tr>
+   	<tr>
+     	<td><input type="button" value="  7   " onclick="getNum(7)"></td>
+     	<td><input type="button" value="  8   " onclick="getNum(8)"></td>
+     	<td><input type="button" value="  9   " onclick="getNum(9)"></td>
+     	<td><input type="button" value="  *   " onclick="getNum('*')"></td>
+   	</tr>
+   	<tr>
+     	<td><input type="button" value="  0   " onclick="getNum(0)"></td>
+     	<td><input type="button" value="  .   " onclick="getNum('.')"></td>
+     	<td><input type="button" value="  =   " onclick="getResult()"></td>
+     	<td><input type="button" value="  /   " onclick="getNum('/')"></td>
+   	</tr>
+ </table>
+ </body>
+ </html>
